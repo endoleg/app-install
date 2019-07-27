@@ -1,4 +1,4 @@
-start-transscript -path "C:\Users\$env:USERNAME\List-of-GPOs-and-Groups.log"
+start-transcript -path "C:\Users\$env:USERNAME\List-of-GPOs-and-Groups.log"
 
 #list some Information like GPOs + group memberships
 write-verbose -message "gpresult" -verbose
