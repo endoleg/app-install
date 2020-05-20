@@ -37,6 +37,8 @@ choco install dropbox -y
 #choco install obs -y
 #choco install autoit -y
 #choco install powertoys -y
+#choco install treesize -y
+#choco install pdfxchange -y
 
 # choco install powershell-core -y
 # Microsoft .NET Framework 4.7.2
