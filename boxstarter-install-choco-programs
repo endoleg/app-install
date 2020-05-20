@@ -1,0 +1,32 @@
+Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowProtectedOSFiles -EnableShowFileExtensions -EnableShowFullPathInTitleBar -EnableOpenFileExplorerToQuickAccess -EnableShowRecentFilesInQuickAccess -EnableShowFrequentFoldersInQuickAccess -EnableExpandToOpenFolder
+Set-TaskbarOptions -Size Small -Lock -Dock Bottom -Combine Always
+Disable-BingSearch
+
+cinst 7zip
+cinst atom
+cinst ccleaner
+cinst cdburnerxp
+cinst dotnet4.5
+cinst filezilla
+cinst firefox
+cinst git
+cinst googlechrome
+cinst jre8
+cinst libreoffice
+cinst notepadplusplus
+cinst paint.net
+cinst pdfcreator
+cinst steam
+cinst sublimetext3
+cinst sublimetext3.packagecontrol
+cinst tortoisegit
+cinst vcredist2010
+cinst vcredist2012
+cinst vcredist2013
+cinst vcredist2015
+cinst virtualbox
+cinst vlc
+cinst winmerge
+cinst winscp
+
+Install-WindowsUpdate -AcceptEula
