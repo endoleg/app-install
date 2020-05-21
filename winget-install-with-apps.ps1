@@ -2,7 +2,7 @@
 #Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/tag/v0.1.4331-preview -OutFile "${Env:TEMP}\v0.1.4331-preview"
 #start ${Env:TEMP}
 
-# from Adriano Cahete's github site
+# from Adriano Cahete's github site https://github.com/AdrianoCahete/winget-installer/blob/master/Install.ps1
 # <https://adrianocahete.dev/>
 
 # Install Winget
