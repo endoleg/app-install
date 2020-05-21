@@ -1,26 +1,11 @@
 
 #Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/tag/v0.1.4331-preview -OutFile "${Env:TEMP}\v0.1.4331-preview"
 #start ${Env:TEMP}
-#install it
 
-# =============================================================
-# Copyright 2020 Adriano Cahete <https://adrianocahete.dev/>
-# TODO: Add License
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-# =============================================================
+# from Adriano Cahete's github site
+# <https://adrianocahete.dev/>
 
 # Install Winget
-# TODO: Check windows version
-# TODO: Check if it's easier to get from repository or MS Store
-# TODO: Check if Sideloading is enabled - https://docs.microsoft.com/en-us/windows/uwp/get-started/enable-your-device-for-development
-# TODO: Do the option to enable sideloading from PS console (I don't know even it's possible)
-# TODO: Clear old files before start
-
 
 # Download latest release from github
 $Repo = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
@@ -69,3 +54,5 @@ winget install "Advanced Installer"
 winget install dropbox
 winget install "Visual Studio Code"
 winget install Screentogif
+
+winget show
