@@ -1,11 +1,11 @@
 # Ninite Apps
 # A # in front means it won't install
 $niniteapps = @(
-    # ".net4.7"
-    # "7zip"
-    # "chrome"
+    # ".net4.7",
+    # "7zip",
+    # "chrome",
     # "cutepdf",
-    # "vlc"
+    # "vlc",
     # "adaware",
     # "aimp",
     # "air",
@@ -42,7 +42,7 @@ $niniteapps = @(
     # "java8",
     # "jdk8",
     # "jdkx8",
-    "keepass2",
+    "keepass2"
     # "klitecodecs",
     # "launchy",
     # "libreoffice",
