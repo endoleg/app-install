@@ -17,6 +17,8 @@ https://github.com/chocolatey/boxstarter
 --> Goto Navigation > packages > Install software packages
 --> Optional you can also include a PowerShell GUI package for Ninite. Just hit Add more packages and select Ninite PowerShellGUI
 or https://ninite.com/ directly
+--> https://github.com/MinersWin/Ninite
+or Invoke-WebRequest -Uri https://ninite.com/chrome/ninite.exe -OutFile ninite.exe
 
 # Winget
 https://github.com/microsoft/winget-cli
