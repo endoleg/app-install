@@ -9,7 +9,24 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 choco feature enable -n allowEmptyChecksums
 choco feature enable -n allowGlobalConfirmation
 
-# Basic
+# Basic testen
+#choco install handbrake -y
+#choco install brave -y
+#choco install obs -y
+#choco install autoit -y
+#choco install powertoys -y
+#choco install treesize -y
+#choco install pdfxchange -y
+#choco install autoit -y
+#choco install virtualbox -y
+#choco install master packager -y
+#choco install autohotkey -y
+#choco install inkscape -y
+#choco install wireshark -y
+#choco install vmware remote console -y
+#choco install innosetup -y
+
+# Basic ok
 choco install googlechrome -y
 choco install firefox -y
 choco install xnview -y
@@ -41,14 +58,6 @@ choco install skype -y
 choco install keepass -y
 choco install gimp -y
 choco install dropbox -y
-
-#choco install handbrake -y
-#choco install brave -y
-#choco install obs -y
-#choco install autoit -y
-#choco install powertoys -y
-#choco install treesize -y
-#choco install pdfxchange -y
 
 # choco install powershell-core -y
 # Microsoft .NET Framework 4.7.2
