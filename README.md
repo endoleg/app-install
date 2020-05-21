@@ -1,4 +1,4 @@
-# Automatic app-install-scripts - quick and silently
+# Automatic app-install - quick and silently
 compilation by Thorsten Enderlein - https://twitter.com/endi24
 
 
@@ -11,7 +11,8 @@ https://twitter.com/chocolateynuget
 
 See packages at https://chocolatey.org/packages/
 
-# Chocolatey Easy Installer Builder:
+# Chocolatey Easy Installer Builder: 
+
 http://pmify.com/choco/
 
 # Chocolatey GUI
