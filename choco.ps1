@@ -12,8 +12,16 @@ choco feature enable -n allowGlobalConfirmation
 # Basic
 choco install googlechrome -y
 choco install firefox -y
-
+choco install xnview -y
+choco install openoffice -y
+choco install googledrive -y 
+choco install keepass -y
+choco install launchy -y
 choco install vlc -y
+choco install k-litecodecpackbasic -y
+choco install flashplayerplugin -y
+choco install dotnet -y
+choco install tweetdeck -y
 choco install irfanview -y
 choco install audacity -y
 choco install paint.net -y
@@ -22,6 +30,7 @@ choco install openoffice -y
 choco install notepadplusplus -y
 choco install winmerge -y
 choco install 7zip -y
+choco install teamviewer6 -y
 choco install teamviewer -y
 choco install filezilla -y
 choco install sysinternals -y
