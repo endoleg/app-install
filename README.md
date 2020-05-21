@@ -1,4 +1,4 @@
-# App-Install quick and silently - automatic App-Install-Scripts
+# Automatic app-install-scripts - quick and silently
 
 # Evergreen
 https://www.powershellgallery.com/packages/Evergreen/
