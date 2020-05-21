@@ -19,6 +19,7 @@ https://github.com/chocolatey/boxstarter
 or https://ninite.com/ directly
 --> https://github.com/MinersWin/Ninite
 or Invoke-WebRequest -Uri https://ninite.com/chrome/ninite.exe -OutFile ninite.exe
+https://github.com/LukaszWasko/Install-NiniteUpdates/wiki
 
 # Winget
 https://github.com/microsoft/winget-cli
