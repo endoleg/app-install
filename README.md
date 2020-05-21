@@ -1,24 +1,23 @@
-# snippets
-App-Install quick and silently - automatic App-Install-Scripts
+# App-Install quick and silently - automatic App-Install-Scripts
 
-Evergreen
+# Evergreen
 https://www.powershellgallery.com/packages/Evergreen/
-@xenappblog @stealthpuppy
+https://twitter.com/stealthpuppy
+https://twitter.com/xenappblog
 
-Chocolatey
+# Chocolatey
 https://chocolatey.org 
 https://twitter.com/chocolateynuget
-
-Boxstarter
-https://boxstarter.org/
+or Boxstarter (combined with Chocolatey)  
+https://boxstarter.org/ 
 https://github.com/chocolatey/boxstarter
 
-Ninite 
+# Ninite 
 --> Use Sharpapp https://github.com/mirinsoft/sharpapp 
 --> Goto Navigation > packages > Install software packages
 --> Optional you can also include a PowerShell GUI package for Ninite. Just hit Add more packages and select Ninite PowerShellGUI
 or https://ninite.com/ directly
 
-Winget
+# Winget
 https://github.com/microsoft/winget-cli
 https://github.com/microsoft/winget-pkgs
