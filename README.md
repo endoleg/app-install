@@ -1,5 +1,5 @@
 # Automatic app-install-scripts - quick and silently
-# compilation by Thorsten Enderlein - https://twitter.com/endi24
+compilation by Thorsten Enderlein - https://twitter.com/endi24
 
 
 # Evergreen
