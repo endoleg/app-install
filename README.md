@@ -42,7 +42,8 @@ or Invoke-WebRequest -Uri https://ninite.com/chrome/ninite.exe -OutFile ninite.e
 
 https://github.com/LukaszWasko/Install-NiniteUpdates/wiki
 
-# Winget (App-Installer from MS Store for Win10 1709 and later)
+# Winget 
+# (App-Installer from MS Store for Win10 1709 and later)
 
 Install initial preview release from here: 
 
