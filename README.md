@@ -1,5 +1,5 @@
 # Automatic app-install - quick and silently
-compilation by Thorsten Enderlein - https://twitter.com/endi24
+Compilation by Thorsten Enderlein - https://twitter.com/endi24
 
 # Chocolatey script
 https://github.com/endoleg/app-install/blob/master/choco.ps1
