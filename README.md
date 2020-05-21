@@ -3,23 +3,30 @@ compilation by Thorsten Enderlein - https://twitter.com/endi24
 
 
 # Chocolatey
+Package manager and installer for software packages
 
 https://chocolatey.org 
 
 https://twitter.com/chocolateynuget
 
-or Boxstarter (combined with Chocolatey)  
+See packages at https://chocolatey.org/packages/
+
+Chocolatey Easy Installer Builder: http://pmify.com/choco/
+
+# Boxstarter
+Repeatable, reboot resilient windows environment installations made easy using Chocolatey packages.
+You can use Boxstarter to install a complete environment or install a small set of tools and windows settings with absolutely no software pre installed and configuration scripts stored in a gist.
+
+https://boxstarter.org/Learn/WebLauncher
 
 https://boxstarter.org/ 
 
 https://github.com/chocolatey/boxstarter
 
-See packages at https://chocolatey.org/packages/
-
-Chocolatey Easy Installer Builder: http://pmify.com/choco/
 
 
 # Ninite 
+Ninite is a package management system offering that enables users automatically install and update popular applications.
 
 --> Use Sharpapp https://github.com/mirinsoft/sharpapp and go to > Navigation > packages > Install software packages
 
