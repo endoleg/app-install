@@ -13,12 +13,10 @@ Boxstarter
 https://boxstarter.org/
 https://github.com/chocolatey/boxstarter
 
-Ninite
-https://ninite.com/
+Ninite 
+--> Use Sharpapp https://github.com/mirinsoft/sharpapp or https://ninite.com/ directly
 
 Winget
 https://github.com/microsoft/winget-cli
 https://github.com/microsoft/winget-pkgs
 
-Sharpapp
-https://github.com/mirinsoft/sharpapp
