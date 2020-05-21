@@ -46,8 +46,8 @@ https://github.com/LukaszWasko/Install-NiniteUpdates/wiki
 
 or https://ninite.com/ directly
 
-# Winget scripts / oneliner
-App-Installer (Windows Package Manager) from MS Store for Win10 1709 and later (so support for Win2016/Win2019)
+# Windows Package Manager (winget) scripts / oneliner
+App-Installer from MS Store for Win10 1709 and later (so support for Win2016/Win2019)
 
 Install initial preview release from here: 
 
@@ -61,7 +61,7 @@ https://github.com/microsoft/winget-pkgs
 
 You can use winget in Windows Terminal, command line, or PowerShell: https://docs.microsoft.com/en-us/windows/package-manager
 
-# winget GUI
+# Windows Package Manager (winget) GUI
 
 https://github.com/goranalkovic/WinGetGui
 
