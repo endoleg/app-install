@@ -8,7 +8,6 @@ $output = "C:\Task\Ninite.exe"
 Invoke-WebRequest $url -OutFile $output
 Start-Process -FilePath "C:\Task\Ninite.exe" -Wait -Verb runas 2>&1 | Out-Null
 
-
 # Create A Scheduled Task
 Write-Host "Creating A Scheduled Task..."
 $taskname = "Ninite"
@@ -16,3 +15,13 @@ $descreption = "Update your Apps!"
 $action = New-ScheduledTaskAction -Execute "C:\Task\Ninite.exe"
 $trigger =  New-ScheduledTaskTrigger -Weekly -WeeksInterval 2 -DaysOfWeek Sunday -At 1pm
 Register-ScheduledTask -TaskName $taskname -Action $action -Trigger $trigger -Description $descreption 2>&1 | Out-Null
+
+##########
+# Restart
+##########
+Write-Host
+Write-Host "Press Any Key To Restart Your System..." -ForegroundColor Black -BackgroundColor White
+$host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+Delete
+Write-Host "Restarting..."
+Restart-Computer
