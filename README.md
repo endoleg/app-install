@@ -61,6 +61,9 @@ https://github.com/microsoft/winget-pkgs
 
 You can use winget in Windows Terminal, command line, or PowerShell: https://docs.microsoft.com/en-us/windows/package-manager
 
+# winget GUI
+
+https://github.com/goranalkovic/WinGetGui
 
 # Evergreen scripts
 
