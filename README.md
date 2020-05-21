@@ -45,3 +45,8 @@ https://github.com/LukaszWasko/Install-NiniteUpdates/wiki
 https://github.com/microsoft/winget-cli
 
 https://github.com/microsoft/winget-pkgs
+
+You can use winget in Windows Terminal, command line, or PowerShell: https://docs.microsoft.com/en-us/windows/package-manager
+
+Install initial preview release from here: https://github.com/microsoft/winget-cli/releases
+
