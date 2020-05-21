@@ -3,9 +3,9 @@
 # Evergreen
 https://www.powershellgallery.com/packages/Evergreen/
 
-https://twitter.com/stealthpuppy
+https://twitter.com/stealthpuppy and https://github.com/aaronparker/
 
-https://twitter.com/xenappblog
+https://twitter.com/xenappblog and https://github.com/haavarstein
 
 # Chocolatey
 
