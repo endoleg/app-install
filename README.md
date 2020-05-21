@@ -28,11 +28,9 @@ Chocolatey Easy Installer Builder: http://pmify.com/choco/
 
 # Ninite 
 
---> Use Sharpapp https://github.com/mirinsoft/sharpapp 
+--> Use Sharpapp https://github.com/mirinsoft/sharpapp and go to > Navigation > packages > Install software packages
 
---> Goto Navigation > packages > Install software packages
-
---> Optional you can also include a PowerShell GUI package for Ninite. Just hit Add more packages and select Ninite PowerShellGUI
+--> Optional you can also include a PowerShell GUI package for Ninite. Just hit "Add more packages" and select Ninite PowerShellGUI
 
 or https://ninite.com/ directly
 
