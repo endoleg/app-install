@@ -34,7 +34,7 @@ or Invoke-WebRequest -Uri https://ninite.com/chrome/ninite.exe -OutFile ninite.e
 https://github.com/LukaszWasko/Install-NiniteUpdates/wiki
 
 # Winget 
-# App-Installer from MS Store for Win10 1709 and later
+App-Installer (Windows Package Manager) from MS Store for Win10 1709 and later
 
 Install initial preview release from here: 
 
@@ -58,3 +58,5 @@ https://www.powershellgallery.com/packages/Evergreen/
 https://twitter.com/stealthpuppy and https://github.com/aaronparker/Evergreen/tree/master/Evergreen/Public
 
 https://twitter.com/xenappblog and https://github.com/haavarstein/Applications
+
+https://twitter.com/cit_bronson and https://github.com/BronsonMagnan/SoftwareUpdate
