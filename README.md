@@ -1,4 +1,6 @@
 # Automatic app-install-scripts - quick and silently
+# compilation by Thorsten Enderlein - https://twitter.com/endi24
+
 
 # Evergreen
 https://www.powershellgallery.com/packages/Evergreen/
