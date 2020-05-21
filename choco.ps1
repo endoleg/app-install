@@ -1,4 +1,5 @@
 # See packages at https://chocolatey.org/packages/
+# Chocolatey Easy Installer Builder: http://pmify.com/choco/
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; 
