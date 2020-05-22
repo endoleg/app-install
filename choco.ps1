@@ -16,17 +16,17 @@ choco feature enable -n allowGlobalConfirmation
 #choco install autoit -y
 #choco install powertoys -y
 #choco install treesize -y
-#choco install pdfxchange -y
 #choco install autoit -y
-#choco install virtualbox -y
 #choco install master packager -y
 #choco install autohotkey -y
-#choco install inkscape -y
 #choco install wireshark -y
 #choco install vmware remote console -y
 #choco install innosetup -y
 
 # Basic ok
+choco install pdfxchange -y
+choco install virtualbox -y
+choco install inkscape -y
 choco install googlechrome -y
 choco install firefox -y
 choco install xnview -y
