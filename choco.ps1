@@ -79,6 +79,7 @@ choco install dropbox -y
 choco install putty.portable -y
 choco install ffmpeg -y
 choco install 4k-video-to-mp3 -y
+choco install mp3directcut -y
 
 ######### Basic test begin
 # choco install pdfxchange -y
