@@ -2,4 +2,6 @@
 
 # https://github.com/mirinsoft/sharpapp
 
-#check if choco ids installed
+# check if choco ids installed
+
+# vcredist
