@@ -66,16 +66,15 @@ choco install skype -y
 choco install keepass -y
 choco install gimp -y
 choco install dropbox -y
+choco install putty.portable -y
 
 ######### Basic test begin
 # choco install pdfxchange -y
 
+
 # choco install powershell-core -y
 
-# Microsoft .NET Framework 4.7.2
-# choco install netfx-4.7.1-devpack -y
-
-# or Microsoft .NET Framework 4.7.2
+# Microsoft .NET Framework latest (4.8)
 # choco install dotnetfx -y
 
 # or Microsoft .NET Framework 4.7.2 Developer Pack
