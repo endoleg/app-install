@@ -22,6 +22,7 @@ choco feature enable -n allowGlobalConfirmation
 #choco install wireshark -y
 #choco install vmware remote console -y
 #choco install innosetup -y
+#choco install tweetdeck -y
 
 # Basic ok
 choco install pdfxchange -y
@@ -38,7 +39,6 @@ choco install vlc -y
 choco install k-litecodecpackbasic -y
 choco install flashplayerplugin -y
 choco install dotnet -y
-choco install tweetdeck -y
 choco install irfanview -y
 choco install audacity -y
 choco install paint.net -y
