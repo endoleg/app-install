@@ -1,9 +1,5 @@
-# Windows Updates
-
 # https://github.com/mirinsoft/sharpapp
 
-# check if choco ids installed
-
-# vcredist
+# check if chocolately is installed
 
 # chromium extensions
