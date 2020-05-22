@@ -59,3 +59,12 @@ winget install "Visual Studio Code"
 winget install Screentogif
 
 winget show
+
+# oneliner
+# @("Microsoft.dotNetFramework","Microsoft.dotnet","7zip.7zip","Twilio.Authy","PiriformSoftware.CCleaner","Google.Chrome","Discord.Discord","Dropbox.Dropbox","TimKosse.FilezillaClient","Mozilla.FirefoxESR","Mozilla.Firefox","gimp.gimp","GitHub.GitHubDesktop","Greenshot.Greenshot","Inkscape.Inkscape","JRSoftware.InnoSetup","Apple.iTunes","DominikReichl.KeePass","Microsoft.Edge","Microsoft.EdgeBeta","Microsoft.EdgeDev","Microsoft.Teams") | ForEach-Object { & winget install $_ }
+
+# oneliner2
+# @("GitHub.GitHubDesktop","Greenshot.Greenshot","Inkscape.Inkscape","JRSoftware.InnoSetup","Apple.iTunes","DominikReichl.KeePass","Microsoft.Edge","Microsoft.EdgeBeta","Microsoft.EdgeDev","Microsoft.Teams","OBSProject.OBSStudio","Notepad++.Notepad++","Microsoft.Powershell","Microsoft.PowerToys","SimonTatham.Putty","Rufus.Rufus","NickeManarin.ScreenToGif","ShareX.ShareX","Microsoft.Skype","SlackTechnologies.Slack","Piriform.Speccy","JAMSoftware.TreeSize") | ForEach-Object { & winget install $_ }
+
+# oneliner3
+# @("Microsoft.VisualStudioCode","Videolan.Vlc","WhatsApp.WhatsApp","Microsoft.WindowsAdminCenter","Microsoft.WindowsTerminal","WinSCP.WinSCP","WiresharkFoundation.Wireshark","Zoom.Zoom") | ForEach-Object { & winget install $_ }
