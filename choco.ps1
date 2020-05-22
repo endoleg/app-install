@@ -13,6 +13,7 @@ choco feature enable -n allowEmptyChecksums
 choco feature enable -n allowGlobalConfirmation
 
 # Basic ok
+choco install whatsapp -y
 choco install windows-admin-center -y
 choco install lavfilters -y
 choco install webex-meetings -y
