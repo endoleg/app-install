@@ -21,8 +21,5 @@ Write-Output “Downloaded to $downloadFile”
 Write-Output “extract”
 Expand-Archive $downloadFile -DestinationPath C:\Windows\Temp\ -Force
 
-#start C:\Windows\Temp\
-#Get-Process sharpapp -ErrorAction SilentlyContinue
-
 cd C:\Windows\Temp\
-cmd.exe --% /c C:\Windows\Temp\sharpapp.exe
+Start-Process C:\Windows\Temp\sharpapp.exe
