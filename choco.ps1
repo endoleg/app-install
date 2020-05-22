@@ -77,5 +77,9 @@ choco install dropbox -y
 #http://pmify.com/choco/
 
 <#
+ #Logs
  start "C:\ProgramData\chocolatey\logs\chocolatey.log"
+ 
+ #Powershell-Sources 
+ start "C:\ProgramData\chocolatey\lib\"
 #>
