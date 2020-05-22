@@ -12,13 +12,13 @@ $FileUrl
 $downloadFile = "C:\Windows\Temp\sharpapp.zip"
 
 # Let the download begin!
-Write-Output “Starting download of the Sysinternals Suite”
+Write-Output “Starting download”
 $webClient = New-Object System.Net.WebClient
 $webClient.DownloadFile(“$FileUrl” ,
                         $downloadFile)
-Write-Output “Sysinternals suite downloaded to $downloadFile”
+Write-Output “Downloaded to $downloadFile”
 
-start C:\Windows\Temp\
+#start C:\Windows\Temp\
 
 
 try {
