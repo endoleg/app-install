@@ -10,21 +10,20 @@ choco feature enable -n allowEmptyChecksums
 choco feature enable -n allowGlobalConfirmation
 
 # Basic testen
-#choco install handbrake -y
-#choco install brave -y
-#choco install obs -y
-#choco install autoit -y
-#choco install powertoys -y
-#choco install treesize -y
-#choco install autoit -y
-#choco install master packager -y
-#choco install autohotkey -y
 #choco install wireshark -y
 #choco install vmware remote console -y
 #choco install innosetup -y
-#choco install tweetdeck -y
 
 # Basic ok
+choco install powertoys -y
+choco install treesizefree -y
+choco install masterpackager -y
+choco install autohotkey -y
+choco install autoit -y
+choco install obs-virtualcam -y
+choco install obs-studio -y
+choco install brave -y
+choco install handbrake -y
 choco install pdfxchange -y
 choco install virtualbox -y
 choco install inkscape -y
