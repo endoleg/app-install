@@ -7,13 +7,13 @@ start http://pmify.com/choco/
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; 
 
-Write-Host "Checking if Chocolatey is already installed..."
+Write-Verbose -message "Checking if Chocolatey is already installed..." -verbose
 if (Get-Command choco.exe -ErrorAction SilentlyContinue) {
-    Write-Host "Chocolatey seems to already be installed."
+    Write-Verbose -message "Chocolatey seems to already be installed." -Verbose
 }
 Else
 {
-    Write-Host "Chocolatey not found. Installing now."
+    Write-Verbose -message "Chocolatey not found. Installing now." -verbose
     Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
     refreshenv
 }
