@@ -1,7 +1,7 @@
 <# 
-###################################################################################################################################################################################
+############################################################################
 # Dieses Skript importiert Altdaten nach einer Profilerneuerung
-###################################################################################################################################################################################
+############################################################################
 
 # Der 1. Teil des Skriptes holt sich Registry-Einstellungen des angemeldeten Users 
   __
@@ -100,16 +100,16 @@ write-verbose -message "----------  message box by calling the .Net Windows.Form
 Add-Type -AssemblyName System.Windows.Forms | Out-Null
 
 write-verbose -message "---------- Benutzername in SID umwandeln ----------" -verbose
-$DOMAIN = "BG10"
+$DOMAIN = "DOMAIN"
 $USERNAME = $env:UserName
 $objUser = New-Object System.Security.Principal.NTAccount($DOMAIN, $USERNAME)
 $strSID = $objUser.Translate([System.Security.Principal.SecurityIdentifier])
-write-verbose -message "---------- Benutzername bg10\$env:UserName ----------" -verbose
+write-verbose -message "---------- Benutzername DOMAIN\$env:UserName ----------" -verbose
 $usersid = $strSID.Value
 $name = "$env:USERNAME"
 
-$backpfadOSunabhangig="\\bg10\citrix\Config\BackupXD\office\$usersid"
-$backpfadNEU2016="\\bg10\citrix\ProfileVSSBackupSID\$usersid\Win2016x64\UPM_Profile"
+$backpfadOSunabhangig="\\DOMAIN\citrix\Config\BackupXD\office\$usersid"
+$backpfadNEU2016="\\DOMAIN\citrix\ProfileVSSBackupSID\$usersid\Win2016x64\UPM_Profile"
 write-verbose -message "---------- Backup kommt von $backpfadNEU2016 ----------" -verbose
 #VSS-Linktypen-Freischaltung mit #&C:\Windows\system32\fsutil behavior set SymLinkEvaluation R2R:1 R2L:1
 
@@ -141,7 +141,7 @@ start $backpfadOSunabhangig
 ##############################################################
 write-verbose -message "----------  Gruppenmitglieder von CTX-Migration-Profilbackup-auslassen sollen das Skript direkt verlassen ----------" -verbose
 ##############################################################
-if ($groups -contains "BG10\CTX-Migration-Profilbackup-auslassen"){
+if ($groups -contains "DOMAIN\CTX-Migration-Profilbackup-auslassen"){
     write-verbose -message "----------Gruppenmitglied von CTX-Migration-Profilbackup-auslassen - Skript wird verlassen" -verbose
 	Write-verbose -message "----------Obwohl keine Migration stattgefunden hat, wird Eintrag gesetzt mit Wert 1 - damit Autostart trotz Gruppe CTX-Migration-Profilbackup-auslassen laeuft----------------------------------" -verbose
     if(! (Test-Path -Path 'HKCU:\Software\_BGETEM_PS')) {New-Item  -Path 'HKCU:\Software\_BGETEM_PS' | Out-Null } 
@@ -637,11 +637,11 @@ Write-Host "Registryeintrag noch nicht vorhanden - es geht weiter in der Klammer
 
       #Platzhalter fuer Export von wichtigen Registryeintraegen
       #reg.exe export "HKEY_CURRENT_USER\Software\SAP" C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-SAP.reg /y
-	  #copy "C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-SAP.reg" \\bg10\citrix\Config\BackupXD\office\
+	  #copy "C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-SAP.reg" \\DOMAIN\citrix\Config\BackupXD\office\
 	  #reg.exe export "HKEY_CURRENT_USER\Software\PDFPrint" C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFPrint.reg /y
-	  #copy "C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFPrint.reg" \\bg10\citrix\Config\BackupXD\office\
+	  #copy "C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFPrint.reg" \\DOMAIN\citrix\Config\BackupXD\office\
       #reg.exe export "HKEY_CURRENT_USER\Software\Tracker Software" C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFXChange.reg /y
-	  #copy "C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFXChange.reg" \\bg10\citrix\Config\BackupXD\office\
+	  #copy "C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFXChange.reg" \\DOMAIN\citrix\Config\BackupXD\office\
 
       #test
       #reg.exe export "HKEY_CURRENT_USER\Software\Landesk\Show Agent Configuration Message" C:\Users\$env:UserName\AppData\Local\Temp\$env:UserName-PDFXChange.reg /y
@@ -657,9 +657,9 @@ Write-Host "Registryeintrag noch nicht vorhanden - es geht weiter in der Klammer
 #Toolbar "Programme" hinzufuegen nach Anleitung :
 #https://jkindon.com/2019/01/29/modern-start-menu-management-and-windows-toolbars/
 #############################################################################
-#Start-Process -filepath "reg.exe" -argumentlist "\\bg10\NETLOGON\Citrix\WEM\Toolbar.reg"
+#Start-Process -filepath "reg.exe" -argumentlist "\\DOMAIN\NETLOGON\Citrix\WEM\Toolbar.reg"
 #Import der der dazugehoerigen Datei
-#regedit /s "\\bg10\NETLOGON\Citrix\WEM\Toolbar.reg"
+#regedit /s "\\DOMAIN\NETLOGON\Citrix\WEM\Toolbar.reg"
 
 #taskkill.exe /F /IM explorer.exe
 #Start-Process Explorer.exe
@@ -676,37 +676,37 @@ Write-Host "Registryeintrag noch nicht vorhanden - es geht weiter in der Klammer
   Write-verbose -message "----------Ersteinrichtung Taskbar----------------------------------" -verbose
   ##################################################################################
 if(!(test-path "C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE")){
-    powershell.exe -WindowStyle Hidden -executionpolicy bypass -file \\bg10\netlogon\Citrix\WEM\PinTo10.ps1 "C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE" PIN TASKBAR
+    powershell.exe -WindowStyle Hidden -executionpolicy bypass -file \\DOMAIN\netlogon\Citrix\WEM\PinTo10.ps1 "C:\Program Files (x86)\Microsoft Office\Office16\OUTLOOK.EXE" PIN TASKBAR
     start-sleep -seconds 2
 }
 if(!(test-path "c:\Users\Public\Desktop\Internet Explorer.lnk" )){
-    powershell.exe -WindowStyle Hidden -executionpolicy bypass -file \\bg10\netlogon\Citrix\WEM\PinTo10.ps1 "c:\Users\Public\Desktop\Internet Explorer.lnk" PIN TASKBAR
+    powershell.exe -WindowStyle Hidden -executionpolicy bypass -file \\DOMAIN\netlogon\Citrix\WEM\PinTo10.ps1 "c:\Users\Public\Desktop\Internet Explorer.lnk" PIN TASKBAR
     start-sleep -seconds 2
 }
 
 if(!(test-path "c:\Users\Public\Desktop\Windows Explorer.lnk")){
-    powershell.exe -WindowStyle Hidden -executionpolicy bypass -file \\bg10\netlogon\Citrix\WEM\PinTo10.ps1 "c:\Users\Public\Desktop\Windows Explorer.lnk" PIN TASKBAR
+    powershell.exe -WindowStyle Hidden -executionpolicy bypass -file \\DOMAIN\netlogon\Citrix\WEM\PinTo10.ps1 "c:\Users\Public\Desktop\Windows Explorer.lnk" PIN TASKBAR
     start-sleep -seconds 2
 }
   ##################################################################################
   #Write-verbose -message "----------PDFs erst Mal von Adobe Reader oeffnen lassen - Festlegung per SetUserFTA ----------------------------------" -verbose
-  #\\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .pdf AcroExch.Document.11
+  #\\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .pdf AcroExch.Document.11
   Write-verbose -message "----------PDFs erst Mal von PDFExchange oeffnen lassen - Festlegung per SetUserFTA ----------------------------------" -verbose
-  \\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .pdf PDFXEdit.PDF
+  \\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .pdf PDFXEdit.PDF
   #Write-verbose -message "----------WAVs erst Mal von VLC oeffnen lassen - Festlegung per SetUserFTA ----------------------------------" -verbose
-  #\\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .wav VLC.wav
+  #\\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .wav VLC.wav
   Write-verbose -message "----------jpeg, jpg, jpe, png von Windows Fotoanzeige oeffnen lassen - Festlegung per SetUserFTA ----------------------------------" -verbose
-  \\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .jpeg jpegfile
-  \\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .jpg jpegfile
-  \\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .jpe jpegfile
-  \\bg10\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .png pngfile
+  \\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .jpeg jpegfile
+  \\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .jpg jpegfile
+  \\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .jpe jpegfile
+  \\DOMAIN\netlogon\Citrix\SetUserFTA\SetUserFTA.exe .png pngfile
 #>
 
 <#
         ########################################################################################
   	    Write-verbose -message "----------Mozilla-Einstellungsdateien vom 2008erProfil ins neue Profil transferieren ------" -verbose
         ########################################################################################
-		$SourcePath = "\\bg10\citrix\Profile\$env:UserName\Win2008x64\UPM_Profile\AppData\Roaming\Mozilla"
+		$SourcePath = "\\DOMAIN\citrix\Profile\$env:UserName\Win2008x64\UPM_Profile\AppData\Roaming\Mozilla"
 		$DestPath = "C:\Users\$env:UserName\AppData\Roaming\Mozilla"
 		if (!(Test-Path $SourcePath))
 		{		#Nichts kopiert - Kein gueltiger Quellpfad: 
