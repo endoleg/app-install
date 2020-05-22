@@ -14,6 +14,7 @@ choco feature enable -n allowGlobalConfirmation
 # end
 
 # Basic ok
+choco install lavfilters -y
 choco install webex-meetings -y
 choco install nirlauncher -y
 choco install innosetup -y
