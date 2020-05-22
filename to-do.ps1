@@ -1,2 +1,1 @@
-# https://github.com/mirinsoft/sharpapp
-
+# boxstarter direct script start
