@@ -10,7 +10,8 @@ choco feature enable -n allowEmptyChecksums
 choco feature enable -n allowGlobalConfirmation
 
 # Basic testen
-# nothing
+# choco install pdfxchange -y
+# end
 
 # Basic ok
 choco install innosetup -y
@@ -29,7 +30,6 @@ choco install obs-virtualcam -y
 choco install obs-studio -y
 choco install brave -y
 choco install handbrake -y
-choco install pdfxchange -y
 choco install virtualbox -y
 choco install inkscape -y
 choco install googlechrome -y
