@@ -12,10 +12,6 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 choco feature enable -n allowEmptyChecksums
 choco feature enable -n allowGlobalConfirmation
 
-# Basic testen
-# choco install pdfxchange -y
-# end
-
 # Basic ok
 choco install windows-admin-center -y
 choco install lavfilters -y
@@ -70,22 +66,29 @@ choco install keepass -y
 choco install gimp -y
 choco install dropbox -y
 
+######### Basic test begin
+# choco install pdfxchange -y
+
 # choco install powershell-core -y
+
 # Microsoft .NET Framework 4.7.2
 # choco install netfx-4.7.1-devpack -y
+
 # or Microsoft .NET Framework 4.7.2
 # choco install dotnetfx -y
+
 # or Microsoft .NET Framework 4.7.2 Developer Pack
 # choco install netfx-4.7.2-devpack
+
 # Microsoft .NET Core 2.2.6
 # choco install dotnetcore -y
+
 # or Microsoft .NET Core Runtime (Install) 2.2.6
 # choco install dotnetcore-runtime.install -y
+
 # More Dev
 # choco install sql-server-management-studio -y
-
-#Chocolatey Easy Installer Builder
-#http://pmify.com/choco/
+######### Basic test end
 
 <#
  #Logs
