@@ -14,6 +14,7 @@ choco feature enable -n allowGlobalConfirmation
 # end
 
 # Basic ok
+choco install nirlauncher -y
 choco install innosetup -y
 choco install wireshark -y
 choco install vmware-tools -y
