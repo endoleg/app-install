@@ -5,7 +5,7 @@ $Repo = "https://api.github.com/repos/mirinsoft/sharpapp/releases/latest"
 
 # --- Query the API to get the url of the zip
 $APIResponse = Invoke-RestMethod -Method Get -Uri $Repo
-$APIResponse 
+$APIResponse
 $FileUrl = $APIResponse.assets.browser_download_url
 $FileUrl
 
@@ -18,13 +18,10 @@ $webClient.DownloadFile(“$FileUrl” ,
                         $downloadFile)
 Write-Output “Downloaded to $downloadFile”
 
+Write-Output “extract”
+Expand-Archive $downloadFile -DestinationPath C:\Windows\Temp\ -Force
+
 #start C:\Windows\Temp\
+Get-Process sharpapp -ErrorAction SilentlyContinue
 
-
-try {
-   Write-Output "Version is: " 
-   sharpapp.exe --version
-   Write-Output "`nsharapp is installed `n" 
-} catch {
-    Write-output "`nsharapp is not installed. Try to install from https://github.com/mirinsoft/sharpapp instead`n"
-}
+start C:\Windows\Temp\sharpapp.exe
