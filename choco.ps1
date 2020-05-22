@@ -75,3 +75,7 @@ choco install dropbox -y
 
 #Chocolatey Easy Installer Builder
 #http://pmify.com/choco/
+
+<#
+ start "C:\ProgramData\chocolatey\logs\chocolatey.log"
+#>
