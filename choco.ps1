@@ -6,7 +6,17 @@ start http://pmify.com/choco/
 
 # Get Chocolatey
 Set-ExecutionPolicy Bypass -Scope Process -Force; 
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+
+Write-Host "Checking if Chocolatey is already installed..."
+if (Get-Command choco.exe -ErrorAction SilentlyContinue) {
+    Write-Host "Chocolatey seems to already be installed."
+}
+Else
+{
+    Write-Host "Chocolatey not found. Installing now."
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+    refreshenv
+}
 
 # config
 choco feature enable -n allowEmptyChecksums
