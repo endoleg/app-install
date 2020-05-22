@@ -14,6 +14,7 @@ choco feature enable -n allowGlobalConfirmation
 # end
 
 # Basic ok
+choco install windows-admin-center -y
 choco install lavfilters -y
 choco install webex-meetings -y
 choco install nirlauncher -y
