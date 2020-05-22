@@ -2,4 +2,4 @@
 
 # check if chocolately is installed
 
-# chromium extensions
+
