@@ -5,32 +5,26 @@ $Repo = "https://api.github.com/repos/mirinsoft/sharpapp/releases/latest"
 
 # --- Query the API to get the url of the zip
 $APIResponse = Invoke-RestMethod -Method Get -Uri $Repo
+$APIResponse 
 $FileUrl = $APIResponse.assets.browser_download_url
+$FileUrl
 
-# --- Download the file to the current location
-$fileName = "$($APIResponse.name.Replace(" ","_")).appxbundle"
-$OutputPath = "$((Get-Location).Path)\files\$fileName"
+$downloadFile = "C:\Windows\Temp\sharpapp.zip"
 
-if (Test-Path -Path "$((Get-Location).Path)\files\")  {
-    Push-Location files
-    Write-Output "Downloading $fileName ...`n"
-    Invoke-RestMethod -Method Get -Uri $FileUrl -OutFile $OutputPath
-} else {
-    mkdir files > $null
-    Push-Location files
-    Write-Output "Downloading $fileName ... `n"
-    Invoke-RestMethod -Method Get -Uri $FileUrl -OutFile $OutputPath
-}
+# Let the download begin!
+Write-Output “Starting download of the Sysinternals Suite”
+$webClient = New-Object System.Net.WebClient
+$webClient.DownloadFile(“$FileUrl” ,
+                        $downloadFile)
+Write-Output “Sysinternals suite downloaded to $downloadFile”
 
-Write-Output "`nInstalling $fileName ...`n"
-Add-AppxPackage $OutputPath
-Pop-Location
-refreshenv
+start C:\Windows\Temp\
+
 
 try {
-   Write-Output "Winget version is: " 
-   winget --version
-   Write-Output "`nWinget is installed. Try to run the 'winget' command.`n" 
+   Write-Output "Version is: " 
+   sharpapp.exe --version
+   Write-Output "`nsharapp is installed `n" 
 } catch {
-    Write-output "`nWinget is not installed. Try to install from MS Store instead`n"
+    Write-output "`nsharapp is not installed. Try to install from https://github.com/mirinsoft/sharpapp instead`n"
 }
