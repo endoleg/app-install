@@ -10,11 +10,16 @@ choco feature enable -n allowEmptyChecksums
 choco feature enable -n allowGlobalConfirmation
 
 # Basic testen
-#choco install wireshark -y
-#choco install vmware remote console -y
-#choco install innosetup -y
+# nothing
 
 # Basic ok
+choco install innosetup -y
+choco install wireshark -y
+choco install vmware-tools -y
+choco install vmware-workstation-player -y
+choco install vmware-powercli-psmodule -y
+choco install vmwarevsphereclient -y
+choco install vmrc -y
 choco install powertoys -y
 choco install treesizefree -y
 choco install masterpackager -y
