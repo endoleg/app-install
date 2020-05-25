@@ -33,9 +33,8 @@ Function Get-RegistryValues {
 $RegistryPath = "HKLM:\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist"
 $KeyType = "String"
  
-# Microsoft Web Activities Extension. This can be any extension. Modify to suit any needs
-$ExtensionID = "eiipeonhflhoiacfbniealbdjoeoglid;https://clients2.google.com/service/update2/crx"
 #https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?hl=de -
+$ExtensionID = "klbibkeccnjlkjkiokjodocebajanakg;https://clients2.google.com/service/update2/crx"
  
 # Registry path does not exist. Creating the path
 if (-not(Test-Path -Path $RegistryPath)) {
