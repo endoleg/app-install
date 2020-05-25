@@ -27,5 +27,5 @@ cd C:\Windows\Temp\
 Start-Process C:\Windows\Temp\sharpapp.exe
 
 <#
-START http://boxstarter.org/package/nr/url?https://raw.githubusercontent.com/endoleg/app-install/master/Optimizations.ps1
+start C:\Windows\Temp\
 #>
