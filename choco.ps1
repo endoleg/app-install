@@ -103,6 +103,15 @@ choco install mp3directcut -y
 # choco install sql-server-management-studio -y
 ######### Basic test end
 
+Write-verbose -message "Creating Daily Task To Automatically Upgrade Chocolatey Packages" -verbose
+$Taskname = "ChocolateyDailyUpgrade"
+$Taskaction = New-Scheduledtaskaction -Execute C:\Programdata\Chocolatey\Choco.Exe -Argument "Upgrade All -Y"
+$Tasktrigger = New-Scheduledtasktrigger -At 2am -Daily
+# Note about TaskUser, I noticed that you have to put the account name. 
+# If domain account, don't include the domain. int.domain.com\bob.domain would just be bob.domain
+$Taskuser = "ReplaceMe"
+Register-Scheduledtask -Taskname $Taskname -Action $Taskaction -Trigger $Tasktrigger -User $Taskuser
+
 <#
  #Logs
  start "C:\ProgramData\chocolatey\logs\chocolatey.log"
