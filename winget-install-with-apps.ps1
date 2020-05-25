@@ -39,26 +39,81 @@ try {
     Write-output "`nWinget is not installed. Try to install from MS Store instead`n"
 }
 
-winget install SSMS
-winget install obs
-winget install powertoys
-winget install VLC
-winget install treesize
-winget install greenshot
-winget install Notepad++
-winget install Keepass
-winget install "Advanced Installer"
-winget install dropbox
-winget install "Visual Studio Code"
-winget install Screentogif
+###############################################
+###### Install from list                  #####
+###### comment out needed apps            #####
+###### last entry has no decimal point !! #####
+###############################################
+@(
+# "Microsoft.dotNetFramework",
+# "Microsoft.dotnet",
+# "7zip.7zip",
+# "Twilio.Authy",
+# "PiriformSoftware.CCleaner",
+# "Google.Chrome",
+# "Discord.Discord",
+# "Dropbox.Dropbox",
+# "TimKosse.FilezillaClient",
+# "Mozilla.FirefoxESR",
+# "Mozilla.Firefox",
+# "gimp.gimp",
+# "GitHub.GitHubDesktop",
+# "Greenshot.Greenshot",
+# "Inkscape.Inkscape",
+# "JRSoftware.InnoSetup",
+# "Apple.iTunes",
+# "DominikReichl.KeePass",
+# "Microsoft.Edge",
+# "Microsoft.EdgeBeta",
+# "Microsoft.EdgeDev",
+# "Microsoft.Teams",
+# "GitHub.GitHubDesktop",
+# "Greenshot.Greenshot",
+# "Inkscape.Inkscape",
+# "JRSoftware.InnoSetup",
+# "Apple.iTunes",
+# "DominikReichl.KeePass",
+# "Microsoft.Edge",
+# "Microsoft.EdgeBeta",
+# "Microsoft.EdgeDev",
+# "Microsoft.Teams",
+# "OBSProject.OBSStudio",
+# "Notepad++.Notepad++",
+# "Microsoft.Powershell",
+# "Microsoft.PowerToys",
+# "SimonTatham.Putty",
+# "Rufus.Rufus",
+# "NickeManarin.ScreenToGif",
+# "ShareX.ShareX",
+# "Microsoft.Skype",
+# "SlackTechnologies.Slack",
+# "Piriform.Speccy",
+# "Microsoft.VisualStudioCode",
+# "Videolan.Vlc",
+# "WhatsApp.WhatsApp",
+# "Microsoft.WindowsAdminCenter",
+# "Microsoft.WindowsTerminal",
+# "WinSCP.WinSCP",
+# "WiresharkFoundation.Wireshark",
+# "Zoom.Zoom",
+# "Microsoft.SQLServerManagementStudio",
+# "JAMSoftware.TreeSize",
+) | ForEach-Object { & winget install $_ }
 
-winget show
 
-# oneliner
-# @("Microsoft.dotNetFramework","Microsoft.dotnet","7zip.7zip","Twilio.Authy","PiriformSoftware.CCleaner","Google.Chrome","Discord.Discord","Dropbox.Dropbox","TimKosse.FilezillaClient","Mozilla.FirefoxESR","Mozilla.Firefox","gimp.gimp","GitHub.GitHubDesktop","Greenshot.Greenshot","Inkscape.Inkscape","JRSoftware.InnoSetup","Apple.iTunes","DominikReichl.KeePass","Microsoft.Edge","Microsoft.EdgeBeta","Microsoft.EdgeDev","Microsoft.Teams") | ForEach-Object { & winget install $_ }
 
-# oneliner2
-# @("GitHub.GitHubDesktop","Greenshot.Greenshot","Inkscape.Inkscape","JRSoftware.InnoSetup","Apple.iTunes","DominikReichl.KeePass","Microsoft.Edge","Microsoft.EdgeBeta","Microsoft.EdgeDev","Microsoft.Teams","OBSProject.OBSStudio","Notepad++.Notepad++","Microsoft.Powershell","Microsoft.PowerToys","SimonTatham.Putty","Rufus.Rufus","NickeManarin.ScreenToGif","ShareX.ShareX","Microsoft.Skype","SlackTechnologies.Slack","Piriform.Speccy","JAMSoftware.TreeSize") | ForEach-Object { & winget install $_ }
 
-# oneliner3
-# @("Microsoft.VisualStudioCode","Videolan.Vlc","WhatsApp.WhatsApp","Microsoft.WindowsAdminCenter","Microsoft.WindowsTerminal","WinSCP.WinSCP","WiresharkFoundation.Wireshark","Zoom.Zoom") | ForEach-Object { & winget install $_ }
+
+
+
+#########
+
+<#
+winget install name
+winget show name
+winget search name
+winget source list
+winget search -?
+winget install --id=Microsoft.SQLServerManagementStudio -e
+
+#>
