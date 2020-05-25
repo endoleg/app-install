@@ -1,16 +1,10 @@
+# GUI: # https://wingetit.com/ oder https://winstall.app/ 
+# or use Sharpapp https://github.com/mirinsoft/sharpapp and go to > Navigation > packages > Install software packages 
+#
+# Some parts of the Script are forked from Adriano Cahete's github site https://github.com/AdrianoCahete/winget-installer/blob/master/Install.ps1
+# manual download --> Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/tag/v0.1.4331-preview -OutFile "${Env:TEMP}\v0.1.4331-preview"
 
-#Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/tag/v0.1.4331-preview -OutFile "${Env:TEMP}\v0.1.4331-preview"
-#start ${Env:TEMP}
-
-# GUI
-# https://wingetit.com/
-
-# from Adriano Cahete's github site https://github.com/AdrianoCahete/winget-installer/blob/master/Install.ps1
-# <https://adrianocahete.dev/>
-
-# Install Winget
-
-# Download latest release from github
+# Download latest Winget-release from github
 $Repo = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
 
 # --- Query the API to get the url of the zip
