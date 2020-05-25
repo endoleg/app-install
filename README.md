@@ -9,7 +9,7 @@ https://github.com/endoleg/app-install/blob/master/tobiah-install.ps1
 # Boxstarter script
 https://github.com/endoleg/app-install/blob/master/boxstarter-install-oneliner.ps1
 
-https://github.com/endoleg/app-install/blob/master/boxstarter-install-choco-programs
+https://github.com/endoleg/app-install/blob/master/boxstarter-install-choco-program-list
 
 # Ninite script
 https://github.com/endoleg/app-install/blob/master/ninite-install-programs-part2.ps1
