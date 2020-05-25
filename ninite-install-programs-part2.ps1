@@ -2,7 +2,7 @@ write-verbose -message "Ninite Apps" -verbose
 ##################################################
 ###### Install from list                     #####
 ###### A "#" in front means it won't install #####
-###### comment out needed apps               #####
+###### comment in the needed apps !!         #####
 ###### last entry has no decimal point !!    #####
 ##################################################
 $niniteapps = @(
