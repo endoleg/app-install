@@ -39,11 +39,12 @@ try {
     Write-output "`nWinget is not installed. Try to install from MS Store instead`n"
 }
 
-###############################################
-###### Install from list                  #####
-###### comment out needed apps            #####
-###### last entry has no decimal point !! #####
-###############################################
+##################################################
+###### Install from list                     #####
+###### A "#" in front means it won't install #####
+###### comment in the needed apps !!         #####
+###### last entry has no decimal point !!    #####
+##################################################
 @(
 # "Microsoft.dotNetFramework",
 # "Microsoft.dotnet",
