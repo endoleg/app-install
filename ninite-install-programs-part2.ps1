@@ -1,5 +1,10 @@
-# Ninite Apps
-# A # in front means it won't install
+write-verbose -message "Ninite Apps" -verbose
+##################################################
+###### Install from list                     #####
+###### A "#" in front means it won't install #####
+###### comment out needed apps               #####
+###### last entry has no decimal point !!    #####
+##################################################
 $niniteapps = @(
     # ".net4.7",
     # "7zip",
@@ -86,7 +91,7 @@ $niniteapps = @(
     # "xnview"
 )
 
-# Download ninite and install the selected apps
+write-verbose -message "Download ninite and install the selected apps" -verbose
 Function DoNiniteInstall {
     Write-Host "Downloading Ninite ..."
     
@@ -102,3 +107,5 @@ Function DoNiniteInstall {
 }
 
 DoNiniteInstall
+
+write-verbose -message "End" -verbose
