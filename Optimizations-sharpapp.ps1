@@ -1,5 +1,5 @@
 write-verbose -message "Removing C:\Windows\Temp\sharpapp.exe and C:\Windows\Temp\sharpapp\*" -verbose
-remove-item "C:\Windows\Temp\sharpapp.exe" -force -ErrorAction SilentlyContinue
+remove-item "C:\Windows\Temp\sharpapp.*" -force -ErrorAction SilentlyContinue
 remove-item "C:\Windows\Temp\scripts\*" -Recurse -Force -ErrorAction SilentlyContinue
 
 write-verbose -message "Download latest sharpapp release from github - https://github.com/mirinsoft/sharpapp" -verbose
