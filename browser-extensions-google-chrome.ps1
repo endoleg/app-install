@@ -33,8 +33,22 @@ Function Get-RegistryValues {
 $RegistryPath = "HKLM:\SOFTWARE\Policies\Google\Chrome\ExtensionInstallForcelist"
 $KeyType = "String"
  
-#https://chrome.google.com/webstore/detail/the-great-suspender/klbibkeccnjlkjkiokjodocebajanakg?hl=de -
+# the-great-suspender
 $ExtensionID = "klbibkeccnjlkjkiokjodocebajanakg;https://clients2.google.com/service/update2/crx"
+
+# simple-vimeo-downloader
+# $ExtensionID = "mffmjlddchdccijipncbjhoabgmphjfb;https://clients2.google.com/service/update2/crx"
+# https-everywhere
+# $ExtensionID = "gcbommkclmclpchllfjekcdonpmejbdp;https://clients2.google.com/service/update2/crx"
+# uBlock Origin 
+# $ExtensionID = "cjpalhdlnbpafiamejdnhcphjbkeiagm;https://clients2.google.com/service/update2/crx"
+# +Roam
+# $ExtensionID = "ekdmipoabmcjmlonhcdoijilfdoomjbm;https://clients2.google.com/service/update2/crx"
+# Just Read
+# $ExtensionID = "dgmanlpmmkibanfdgjocnabmcaclkmod;https://clients2.google.com/service/update2/crx"
+# Momentum
+# $ExtensionID = "laookkfknpbbblfpciffpaejjkokdgca;https://clients2.google.com/service/update2/crx"
+
  
 # Registry path does not exist. Creating the path
 if (-not(Test-Path -Path $RegistryPath)) {
