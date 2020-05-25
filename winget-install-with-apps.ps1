@@ -34,7 +34,6 @@ refreshenv
 try {
    Write-Output "Winget version is: " 
    winget --version
-   Write-Output "`nWinget is installed. Try to run the 'winget' command.`n" 
 } catch {
     Write-output "`nWinget is not installed. Try to install from MS Store instead`n"
 }
@@ -101,7 +100,7 @@ try {
 # "JAMSoftware.TreeSize",
 ) | ForEach-Object { & winget install $_ }
 
-
+write-verbose -message "End" -verbose
 
 
 
