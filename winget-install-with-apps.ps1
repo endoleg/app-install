@@ -3,6 +3,7 @@
 #
 # Some parts of the Script are forked from Adriano Cahete's github site https://github.com/AdrianoCahete/winget-installer/blob/master/Install.ps1
 # manual download --> Invoke-WebRequest https://github.com/microsoft/winget-cli/releases/tag/v0.1.4331-preview -OutFile "${Env:TEMP}\v0.1.4331-preview"
+# or similar to this # Add-AppxPackage -Path https://github.com/microsoft/winget-cli/releases/tag/v0.1.4331-preview.appxbundle
 
 # Download latest Winget-release from github
 $Repo = "https://api.github.com/repos/microsoft/winget-cli/releases/latest"
