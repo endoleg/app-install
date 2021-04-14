@@ -21,6 +21,8 @@ GUI: https://wingetit.com/ or https://winstall.app/ (more recent)
 
 or use Sharpapp https://github.com/mirinsoft/sharpapp and go to > Navigation > packages > Install software packages 
 
+Roadmap: https://github.com/microsoft/winget-cli/blob/master/doc/windows-package-manager-v1-roadmap.md
+
 https://github.com/endoleg/app-install/blob/master/winget-install-with-apps.ps1
 
 # Evergreen script
