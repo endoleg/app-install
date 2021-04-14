@@ -1,4 +1,4 @@
-# GUI: # https://wingetit.com/ oder https://winstall.app/ 
+# GUI: # https://wingetit.com/ or https://winstall.app/ (more recent)
 # or use Sharpapp https://github.com/mirinsoft/sharpapp and go to > Navigation > packages > Install software packages 
 #
 # Some parts of the Script are forked from Adriano Cahete's github site https://github.com/AdrianoCahete/winget-installer/blob/master/Install.ps1
@@ -104,7 +104,7 @@ try {
 write-verbose -message "End" -verbose
 
 
-
+winget install Cisco.Jabber
 
 
 #########
