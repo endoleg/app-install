@@ -20,7 +20,9 @@ https://github.com/endoleg/app-install/blob/master/ninite-install-programs.ps1
 https://github.com/endoleg/app-install/blob/master/winget-install-with-apps.ps1
 
 # Evergreen script
-follows...
+https://github.com/Deyda/Evergreen-Script
+https://github.com/Mohrpheus78/Evergreen
+https://github.com/endoleg/app-install/blob/master/evergreen.ps1
 
 # More information
 https://endoleg.github.io/automatic-app-install.html
