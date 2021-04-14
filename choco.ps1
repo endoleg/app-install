@@ -80,10 +80,10 @@ choco install putty.portable -y
 choco install ffmpeg -y
 choco install 4k-video-to-mp3 -y
 choco install mp3directcut -y
+choco install jabber
+choco install webex-teams
 
-######### Basic test begin
 # choco install pdfxchange -y
-
 
 # choco install powershell-core -y
 
@@ -111,6 +111,29 @@ $Tasktrigger = New-Scheduledtasktrigger -At 2am -Daily
 # If domain account, don't include the domain. int.domain.com\bob.domain would just be bob.domain
 $Taskuser = "ReplaceMe"
 Register-Scheduledtask -Taskname $Taskname -Action $Taskaction -Trigger $Tasktrigger -User $Taskuser
+
+# Cisco Jabber - https://community.chocolatey.org/packages/jabber 
+$ErrorActionPreference = 'Stop';
+$url            = 'https://binaries.webex.com/static-content-pipeline/jabber-upgrade/production/jabberdesktop/apps/windows/public/14.0.0.305563/CiscoJabberSetup.msi'
+$packageArgs = @{
+  packageName   = $env:ChocolateyPackageName
+  fileType      = 'msi'
+  url           = $url
+  softwareName  = 'Cisco Jabber*'
+  silentArgs    = "/qn /norestart"
+  validExitCodes= @(0, 3010, 1641)
+}
+Install-ChocolateyPackage @packageArgs
+
+# Cisco Webex Teams - https://community.chocolatey.org/packages/webex-teams
+$ErrorActionPreference = 'Stop';
+$packageArgs = @{
+  packageName  = $env:ChocolateyPackageName
+  fileType     = 'MSI'
+  url          = 'https://binaries.webex.com/WebexTeamsDesktop-Windows-Gold/WebexTeams.msi'
+  silentArgs   = "/qn /norestart /l*v `"$env:TEMP\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+}
+Install-ChocolateyPackage @packageArgs
 
 <#
  #Logs
