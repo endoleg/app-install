@@ -1,0 +1,10 @@
+https://github.com/PSAppDeployToolkit/PSAppDeployToolkit
+https://psappdeploytoolkit.com/
+
+PowerShell App Deployment Toolkit PowerShell module: https://github.com/JonathanPitre/PSADT and https://www.powershellgallery.com/packages/PSADT/
+Install-Module -Name PSADT
+
+Installation Scripts: https://github.com/JonathanPitre/Apps
+
+PSADT snippits/cheatsheet: https://gist.github.com/leeramsay/1579b897c579535880f01a267c41e585
+
