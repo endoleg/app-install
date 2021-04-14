@@ -2,7 +2,7 @@
 Compilation by Thorsten Enderlein - https://twitter.com/endi24
 
 # Chocolatey script
-https://github.com/endoleg/app-install/blob/master/choco.ps1
+https://github.com/endoleg/app-install/blob/master/chocolatey.ps1
 
 https://github.com/endoleg/app-install/blob/master/tobiah-install.ps1
 
