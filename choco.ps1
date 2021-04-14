@@ -82,6 +82,7 @@ choco install 4k-video-to-mp3 -y
 choco install mp3directcut -y
 choco install jabber
 choco install webex-teams
+choco install webex-meetings
 
 # choco install pdfxchange -y
 
@@ -132,6 +133,17 @@ $packageArgs = @{
   fileType     = 'MSI'
   url          = 'https://binaries.webex.com/WebexTeamsDesktop-Windows-Gold/WebexTeams.msi'
   silentArgs   = "/qn /norestart /l*v `"$env:TEMP\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+}
+Install-ChocolateyPackage @packageArgs
+
+# Cisco Webex Meetings - https://community.chocolatey.org/packages/webex-meetings
+$ErrorActionPreference = 'Stop';
+$packageArgs = @{
+  packageName  = $env:ChocolateyPackageName
+  fileType     = 'MSI'
+
+  url          = 'https://akamaicdn.webex.com/client/webexapp.msi'
+  silentArgs   = "/qn /norestart /l*v `"$env:TEMP\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" AUTOOC=0"
 }
 Install-ChocolateyPackage @packageArgs
 
