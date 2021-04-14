@@ -17,7 +17,7 @@ https://github.com/endoleg/app-install/blob/master/ninite-install-programs-part2
 https://github.com/endoleg/app-install/blob/master/ninite-install-programs.ps1
 
 # Windows Package Manager (winget) script
-GUI: # https://wingetit.com/ oder https://winstall.app/ 
+GUI: https://wingetit.com/ or https://winstall.app/ (more recent)
 
 or use Sharpapp https://github.com/mirinsoft/sharpapp and go to > Navigation > packages > Install software packages 
 
