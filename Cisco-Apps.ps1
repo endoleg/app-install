@@ -84,3 +84,18 @@ $appMSI = "c:\Windows\Temp\webexapp.msi"
 write-verbose -Message "Download der neuesten webexapp.msi nach $appMSI" -Verbose
 $appURL = "https://akamaicdn.webex.com/client/webexapp.msi"
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
+
+#########################################################################
+
+#Beispiel-URL: https://akamaicdn.webex.com/client/WBXclient-41.4.5-14/webexvdi.msi
+write-verbose -Message "Download webexvdi.msi - Cisco Webex Meetings Desktop VDI Plugin" -Verbose
+$webRequest = Invoke-WebRequest -UseBasicParsing -Uri ("https://bgetem.webex.com/webappng/sites/bgetem/dashboard/download") -SessionVariable websession
+$regexURL = "https\:\/\/akamaicdn\.webex\.com\/client\/WBXclient-\d*.\d*.\d*-\d*\/"
+write-verbose -Message "------------------------------" -Verbose
+write-verbose -Message "Verfuegbare Versionen" -Verbose
+$webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value }
+write-verbose -Message "------------------------------" -Verbose
+$appMSI = "c:\Windows\Temp\webexvdi.msi"
+write-verbose -Message "Download der neuesten webexvdi.msi nach $appMSI" -Verbose
+$appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
+Invoke-WebRequest -UseBasicParsing -Uri "$($appURL)webexvdi.msi" -OutFile $appMSI
