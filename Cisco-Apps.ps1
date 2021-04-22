@@ -74,3 +74,14 @@ $appMSI = "c:\Windows\Temp\WebexVDIPlugin.msi"
 write-verbose -Message "Download der neuesten WebexVDIPlugin.msi nach $appMSI" -Verbose
 $appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
+
+#########################################################################
+
+#Neueste Version der Cisco Webex Meetings-Desktop-App mit Powershell herunterladen
+# Beispiel-URL: https://akamaicdn.webex.com/client/WBXclient-41.4.5-14/webexapp.msi
+# oder https://akamaicdn.webex.com/client/webexapp.msi
+write-verbose -Message "Download webexapp.msi - Cisco Webex Meetings-Desktop-App" -Verbose
+$appMSI = "c:\Windows\Temp\webexapp.msi"
+write-verbose -Message "Download der neuesten webexapp.msi nach $appMSI" -Verbose
+$appURL = "https://akamaicdn.webex.com/client/webexapp.msi"
+Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
