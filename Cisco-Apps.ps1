@@ -16,7 +16,6 @@ Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 #Neueste Version der Cisco Jabber Application mit Powershell herunterladen
 write-verbose -Message "Download CiscoJabberSetup.msi" -Verbose
 $webRequest = Invoke-WebRequest -UseBasicParsing -Uri ("https://www.webex.com/downloads/jabber/jabber-vdi.html") -SessionVariable websession
-#$regexURL = "https\:\/\/binaries\.webex\.com\/jabbervdiwindows\/\d*\/CiscoJVDIAgentSetup.msi"
 $regexURL = "https\:\/\/binaries\.webex\.com\/static-content-pipeline\/jabber-upgrade\/production\/jabberdesktop\/apps\/windows\/public\/\d*.*.*.*\/CiscoJabberSetup.msi"
 write-verbose -Message "------------------------------" -Verbose
 write-verbose -Message "Verfuegbare Versionen" -Verbose
