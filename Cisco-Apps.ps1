@@ -11,7 +11,7 @@ write-verbose -Message "Download latest CiscoJVDIAgentSetup.msi to $appMSI" -Ver
 $appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 
-#########################################################################
+##################################################################################################################################################
 
 #Neueste Version der Cisco Jabber Application mit Powershell herunterladen
 write-verbose -Message "Download CiscoJabberSetup.msi" -Verbose
@@ -26,7 +26,7 @@ write-verbose -Message "Download der neuesten CiscoJabberSetup.msi nach $appMSI"
 $appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 
-#########################################################################
+##################################################################################################################################################
 
 #Neueste Version des Cisco Jabber VDI Clients (x64) mit Powershell herunterladen
 write-verbose -Message "Download CiscoJVDIClientSetup-x86_64.msi" -Verbose
@@ -41,7 +41,7 @@ write-verbose -Message "Download der neuesten CiscoJVDIClientSetup-x86_64.msi na
 $appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 
-#########################################################################
+##################################################################################################################################################
 
 #Neueste Version des Webex Teams VDI HVD Installers (x64) mit Powershell herunterladen
 # Beispiel-URL: https://binaries.webex.com/vdi-hvd-aws-gold/20210122084730/Webex.msi
@@ -58,7 +58,7 @@ write-verbose -Message "Download der neuesten Webex.msi nach $appMSI" -Verbose
 $appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 
-#########################################################################
+##################################################################################################################################################
 
 #Neueste Version des Webex Teams VDI Desktop Plugin (x64) mit Powershell herunterladen
 # Beispiel-URL: https://binaries.webex.com/WebexTeamsDesktop-Windows-VDI-gold-Production/20210409083713/WebexVDIPlugin.msi
@@ -74,7 +74,7 @@ write-verbose -Message "Download der neuesten WebexVDIPlugin.msi nach $appMSI" -
 $appURL = $webRequest.RawContent | Select-String -Pattern $regexURL -AllMatches | ForEach-Object { $_.Matches.Value } | Select-Object -First 1
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 
-#########################################################################
+##################################################################################################################################################
 
 #Neueste Version der Cisco Webex Meetings-Desktop-App mit Powershell herunterladen
 # Beispiel-URL: https://akamaicdn.webex.com/client/WBXclient-41.4.5-14/webexapp.msi
@@ -85,8 +85,9 @@ write-verbose -Message "Download der neuesten webexapp.msi nach $appMSI" -Verbos
 $appURL = "https://akamaicdn.webex.com/client/webexapp.msi"
 Invoke-WebRequest -UseBasicParsing -Uri $appURL -OutFile $appMSI
 
-#########################################################################
+##################################################################################################################################################
 
+#Neueste Version der Cisco Webex Meetings Desktop VDI Plugin mit Powershell herunterladen
 #Beispiel-URL: https://akamaicdn.webex.com/client/WBXclient-41.4.5-14/webexvdi.msi
 write-verbose -Message "Download webexvdi.msi - Cisco Webex Meetings Desktop VDI Plugin" -Verbose
 $webRequest = Invoke-WebRequest -UseBasicParsing -Uri ("https://bgetem.webex.com/webappng/sites/bgetem/dashboard/download") -SessionVariable websession
