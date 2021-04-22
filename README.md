@@ -25,12 +25,14 @@ Roadmap: https://github.com/microsoft/winget-cli/blob/master/doc/windows-package
 
 https://github.com/endoleg/app-install/blob/master/winget-install-with-apps.ps1
 
-# Evergreen script
+# Evergreen scripts
 With GUI: https://github.com/Deyda/Evergreen-Script
 
 With GUI: https://github.com/Mohrpheus78/Evergreen
 
 https://github.com/endoleg/app-install/blob/master/evergreen.ps1
+
+https://github.com/JonathanPitre/Apps
 
 # More information
 https://endoleg.github.io/automatic-app-install.html
