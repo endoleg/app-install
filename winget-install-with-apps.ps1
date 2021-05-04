@@ -121,20 +121,28 @@ winget install --id=Microsoft.SQLServerManagementStudio -e
 
 #####################################################################################################################
 
+##############################################################
 # Sources https://github.com/microsoft/winget-pkgs/tree/master/manifests
-# First install winget from https://github.com/microsoft/winget-cli/releases
+# First install winget (minimum 0.3) from https://github.com/microsoft/winget-cli/releases
 # With 'winget show' you can get a list of all Apps
+##############################################################
+
+# short script to get the download URL of Apps
+
 #$App="cisco.jabber"
 #$App="Cisco.WebexTeams"
-$AppCisco.CiscoWebexMeetings
+$App=Cisco.CiscoWebexMeetings
+
 $Source=(winget show $App)
+
 $regex_Download_URL_LINE = "Download.Url:.*"
-#$regexDownloadURL = "Url:[\s]*https\:\/\/.*"
+#$regex_Download_URL_LINE = "Url:[\s]*https\:\/\/.*"
 $regex_HTTP = "https\:\/\/.*"
+
 #trim spaces
-#$regexURL = "^[\s]*(.*?)[\s]*$"
-###$regexURL = "^[\s]*(.*?)[\s]*https\:\/\/.*"
-#$regexURL = "(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"
+#$regex_HTTP = "^[\s]*(.*?)[\s]*$"
+###$regex_HTTP = "^[\s]*(.*?)[\s]*https\:\/\/.*"
+#$regex_HTTP = "(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]+\.[^\s]{2,}|www\.[a-zA-Z0-9]+\.[^\s]{2,})"
 
 $FirstRegex = $Source | Select-String -Pattern $regex_Download_URL_LINE -AllMatches | ForEach-Object { $_.Matches.Value }
 $FirstRegex | Select-String -Pattern $regex_HTTP -AllMatches | ForEach-Object { $_.Matches.Value }
