@@ -36,5 +36,7 @@ https://github.com/endoleg/app-install/blob/master/evergreen.ps1
 
 https://github.com/JonathanPitre/Apps
 
+Latest commits: https://github.com/aaronparker/Evergreen/commits/main/Evergreen/Manifests
+
 # More information
 https://endoleg.github.io/automatic-app-install.html
