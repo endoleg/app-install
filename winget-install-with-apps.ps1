@@ -146,3 +146,9 @@ $regex_HTTP = "https\:\/\/.*"
 
 $FirstRegex = $Source | Select-String -Pattern $regex_Download_URL_LINE -AllMatches | ForEach-Object { $_.Matches.Value }
 $FirstRegex | Select-String -Pattern $regex_HTTP -AllMatches | ForEach-Object { $_.Matches.Value }
+
+
+or
+
+#winget search webex
+(winget show Cisco.CiscoWebexMeetings | where {$_ -match '\s+Download URL:'}) -replace '\s+Download URL: ',''
