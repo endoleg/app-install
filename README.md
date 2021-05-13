@@ -44,13 +44,23 @@ https://github.com/PSAppDeployToolkit/PSAppDeployToolkit
 
 https://psappdeploytoolkit.com/
 
+https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/wiki/toolkit-usage
+
 PowerShell App Deployment Toolkit PowerShell module: https://github.com/JonathanPitre/PSADT and https://www.powershellgallery.com/packages/PSADT/
 
-Install-Module -Name PSADT
+PSADT-Module by Jonathan Pitre: Install-Module -Name PSADT
 
-Installation Scripts (directly/evergreen/PSADT): https://github.com/JonathanPitre/Apps
+Some Installation Scripts (directly/evergreen/PSADT): https://github.com/JonathanPitre/Apps
 
 PSADT snippits/cheatsheet: https://gist.github.com/leeramsay/1579b897c579535880f01a267c41e585
+
+ZeroconfigExeInstall: https://github.com/KevinStreet/ZeroConfigExeInstall
+
+Zero-Config-MSI-Install: https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/blob/master/wiki/Zero-Config-MSI-Install.md
+
+ToolkitPlus: https://github.com/cybermoloch/PSAppDeployToolkit-Plus
+
+ToolkitPlus-Apps: https://github.com/cybermoloch/PSAppDeployToolkit-Apps
 
 # Nevergreen
 https://github.com/dangough/Nevergreen
