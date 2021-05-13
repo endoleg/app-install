@@ -37,9 +37,20 @@ With GUI: https://github.com/Mohrpheus78/Evergreen
 
 https://github.com/endoleg/app-install/blob/master/evergreen.ps1
 
-Directly/PSADT: https://github.com/JonathanPitre/Apps
-
 Latest commits: https://github.com/aaronparker/Evergreen/commits/main/Evergreen/Manifests
+
+# PSADT - PowerShell App Deployment Toolkit
+https://github.com/PSAppDeployToolkit/PSAppDeployToolkit
+
+https://psappdeploytoolkit.com/
+
+PowerShell App Deployment Toolkit PowerShell module: https://github.com/JonathanPitre/PSADT and https://www.powershellgallery.com/packages/PSADT/
+
+Install-Module -Name PSADT
+
+Installation Scripts (directly/evergreen/PSADT): https://github.com/JonathanPitre/Apps
+
+PSADT snippits/cheatsheet: https://gist.github.com/leeramsay/1579b897c579535880f01a267c41e585
 
 # Nevergreen
 https://github.com/dangough/Nevergreen
