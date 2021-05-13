@@ -79,6 +79,8 @@ ToolkitPlus-Apps: https://github.com/cybermoloch/PSAppDeployToolkit-Apps
 
 https://rakhesh.com/powershell/notes-on-psadt/
 
+https://github.com/heywoodg/Document-PSADT
+
 https://jrudlin.github.io/2020-03-08-3rd-party-application-patching-with-intune-and-chocolatey/#psadt
 
 # More information
