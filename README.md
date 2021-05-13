@@ -27,6 +27,9 @@ https://github.com/endoleg/app-install/blob/master/winget-install-with-apps.ps1
 
 Latest commits: https://github.com/microsoft/winget-pkgs/commits/master/manifests
 
+# Misc
+https://github.com/haavarstein/Applications
+
 # Evergreen scripts
 With GUI: https://github.com/Deyda/Evergreen-Script
 
