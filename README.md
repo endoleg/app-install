@@ -30,6 +30,9 @@ Latest commits: https://github.com/microsoft/winget-pkgs/commits/master/manifest
 # Misc
 Using Chocolatey/SourceForge/Evergreen/Directly: https://github.com/haavarstein/Applications
 
+# Nevergreen
+https://github.com/dangough/Nevergreen
+
 # Evergreen scripts
 With GUI: https://github.com/Deyda/Evergreen-Script
 
@@ -45,6 +48,18 @@ https://github.com/PSAppDeployToolkit/PSAppDeployToolkit
 https://psappdeploytoolkit.com/
 
 https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/wiki/toolkit-usage
+
+https://www.deploymentshare.com/psadt-write-up/
+
+https://replicajunction.github.io/2015/04/07/installing-applications-with-psadt-part1/
+
+https://github.com/zachegwood/Automatic-Application-Updater
+
+https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/blob/master/PSAppDeployToolkit.pdf
+
+https://github.com/PSAppDeployToolkit/PSAppDeployToolkit/blob/master/Toolkit/AppDeployToolkit/AppDeployToolkitMain.ps1
+
+http://allnewandimproved.psappdeploytoolkit.com/functions/
 
 PowerShell App Deployment Toolkit PowerShell module: https://github.com/JonathanPitre/PSADT and https://www.powershellgallery.com/packages/PSADT/
 
@@ -62,8 +77,9 @@ ToolkitPlus: https://github.com/cybermoloch/PSAppDeployToolkit-Plus
 
 ToolkitPlus-Apps: https://github.com/cybermoloch/PSAppDeployToolkit-Apps
 
-# Nevergreen
-https://github.com/dangough/Nevergreen
+https://rakhesh.com/powershell/notes-on-psadt/
+
+https://jrudlin.github.io/2020-03-08-3rd-party-application-patching-with-intune-and-chocolatey/#psadt
 
 # More information
 https://endoleg.github.io/automatic-app-install.html
