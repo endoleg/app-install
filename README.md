@@ -28,7 +28,7 @@ https://github.com/endoleg/app-install/blob/master/winget-install-with-apps.ps1
 Latest commits: https://github.com/microsoft/winget-pkgs/commits/master/manifests
 
 # Misc
-https://github.com/haavarstein/Applications
+Using Chocolatey/SourceForge/Evergreen/Directly: https://github.com/haavarstein/Applications
 
 # Evergreen scripts
 With GUI: https://github.com/Deyda/Evergreen-Script
@@ -37,7 +37,7 @@ With GUI: https://github.com/Mohrpheus78/Evergreen
 
 https://github.com/endoleg/app-install/blob/master/evergreen.ps1
 
-https://github.com/JonathanPitre/Apps
+Directly/PSADT: https://github.com/JonathanPitre/Apps
 
 Latest commits: https://github.com/aaronparker/Evergreen/commits/main/Evergreen/Manifests
 
