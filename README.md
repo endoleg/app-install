@@ -41,5 +41,8 @@ https://github.com/JonathanPitre/Apps
 
 Latest commits: https://github.com/aaronparker/Evergreen/commits/main/Evergreen/Manifests
 
+# Nevergreen
+https://github.com/dangough/Nevergreen
+
 # More information
 https://endoleg.github.io/automatic-app-install.html
