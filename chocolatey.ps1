@@ -84,6 +84,9 @@ choco install jabber
 choco install webex-teams
 choco install webex-meetings
 
+choco install virtualbox -y
+choco install packer -y
+
 # choco install pdfxchange -y
 
 # choco install powershell-core -y
