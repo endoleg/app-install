@@ -85,3 +85,9 @@ https://jrudlin.github.io/2020-03-08-3rd-party-application-patching-with-intune-
 
 # More information
 https://endoleg.github.io/automatic-app-install.html
+
+
+https://patchmypc.com/freeupdater/definitions/definitions.xml
+
+https://github.com/haavarstein/Applications/blob/master/Applications.xml
+
