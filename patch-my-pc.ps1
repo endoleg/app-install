@@ -1,3 +1,4 @@
+#thanks to haavarstein for the idea
 Clear-Host
 
 Write-Verbose "Setting Arguments" -Verbose
@@ -40,26 +41,26 @@ foreach ($App in $MyConfigFile.Applications.ChildNodes)
 $Product = $App.Product
 write-verbose "Product $Product " -verbose
 $Vendor = $App.Vendor
-write-verbose "$Vendor" -verbose
+write-verbose "Vendor $Vendor" -verbose
 $Architecture = $App.Architecture
-write-verbose "$Architecture" -verbose
+write-verbose "Architecture $Architecture" -verbose
 $DisplayName = $App.DisplayName
-write-verbose "$DisplayName" -verbose
+write-verbose "DisplayName $DisplayName" -verbose
 $PackageName = "$Product"
-write-verbose "$PackageName " -verbose
+write-verbose "PackageName $PackageName " -verbose
 $Evergreen = $App.Evergreen
-write-verbose "$Evergreen" -verbose
+write-verbose "Evergreen $Evergreen" -verbose
 $Version = $MyDefinitionFile.Data.ARPData.$("$Product" + "Ver")
-write-verbose "$Version" -verbose
+write-verbose "Version $Version" -verbose
 $URL = $MyDefinitionFile.Data.ARPData.$("$Product" + "Download")
-write-verbose "$URL " -verbose
+write-verbose "URL $URL " -verbose
 $InstallerType = $App.Installer
-write-verbose "$InstallerType " -verbose
+write-verbose "InstallerType $InstallerType " -verbose
 $UnattendedArgs = $App.Install
-write-verbose "$UnattendedArgs" -verbose
+write-verbose "UnattendedArgs $UnattendedArgs" -verbose
 $UnattendedArgs = $UnattendedArgs.Replace("/i ","")
-write-verbose "$UnattendedArgs " -verbose
+write-verbose "UnattendedArgs $UnattendedArgs " -verbose
 $LogApp = "${env:SystemRoot}" + "\Temp\$Product $Version.log"
-write-verbose "$LogApp" -verbose
+write-verbose "LogApp $LogApp" -verbose
 write-output "-----------------------------------------------------------------"
 }
