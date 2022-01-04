@@ -32,41 +32,34 @@ $MyConfigFileloc = ("$XML")
 $MyDefinitionFileloc = ("$PathMyPC")
 [xml]$MyDefinitionFile = (Get-Content $Path\Definitions.xml)
 
-#$TentantID = "xenappblog.com"
-
-
-[xml]$MyDefinitionFile = (Get-Content $Path\Definitions.xml)
-
-#$MyDefinitionFile
-
-
 foreach ($App in $MyConfigFile.Applications.ChildNodes)
 {
 
 #Connect-MSIntuneGraph -TenantID $TentantID | Out-Null
 
 $Product = $App.Product
-$Product 
+write-verbose "Product $Product " -verbose
 $Vendor = $App.Vendor
-$Vendor
+write-verbose "$Vendor" -verbose
 $Architecture = $App.Architecture
-$Architecture
+write-verbose "$Architecture" -verbose
 $DisplayName = $App.DisplayName
-$DisplayName
+write-verbose "$DisplayName" -verbose
 $PackageName = "$Product"
-$PackageName 
+write-verbose "$PackageName " -verbose
 $Evergreen = $App.Evergreen
+write-verbose "$Evergreen" -verbose
 $Version = $MyDefinitionFile.Data.ARPData.$("$Product" + "Ver")
-$Version
+write-verbose "$Version" -verbose
 $URL = $MyDefinitionFile.Data.ARPData.$("$Product" + "Download")
-$URL 
+write-verbose "$URL " -verbose
 $InstallerType = $App.Installer
-$InstallerType 
+write-verbose "$InstallerType " -verbose
 $UnattendedArgs = $App.Install
-$UnattendedArgs
+write-verbose "$UnattendedArgs" -verbose
 $UnattendedArgs = $UnattendedArgs.Replace("/i ","")
-$UnattendedArgs 
+write-verbose "$UnattendedArgs " -verbose
 $LogApp = "${env:SystemRoot}" + "\Temp\$Product $Version.log"
-$LogApp 
+write-verbose "$LogApp" -verbose
 write-output "-----------------------------------------------------------------"
 }
