@@ -1,9 +1,9 @@
-#thanks to haavarstein for the idea
+# Thanks to haavarstein for the idea
+
 Clear-Host
 
 Write-Verbose "Setting Arguments" -Verbose
 $ProgressPreference = 'SilentlyContinue'
-#$Icons = "C:\Icons"
 $Path = "C:\Windows\Temp"
 $Template = "$Path\AppV_Template.appvt"
 $TemplateURL = "https://raw.githubusercontent.com/haavarstein/Applications/master/AppV_Template.appvt"
@@ -11,7 +11,6 @@ $XML = "$Path\Applications.xml"
 $XMLURL = "https://raw.githubusercontent.com/haavarstein/Applications/master/Applications.xml"
 $PatchMyPC = "$Path\Definitions.xml"
 $PatchMyPCURL = "https://patchmypc.com/freeupdater/definitions/definitions.xml"
-$TeamsWebHook = "XXXXXXXXXXXXX"
 
 # Set Timeout
 [System.Net.ServicePointManager]::MaxServicePointIdleTime = 5000000
@@ -39,28 +38,28 @@ foreach ($App in $MyConfigFile.Applications.ChildNodes)
 #Connect-MSIntuneGraph -TenantID $TentantID | Out-Null
 
 $Product = $App.Product
-write-verbose "Product $Product " -verbose
+write-verbose "Product: $Product " -verbose
 $Vendor = $App.Vendor
-write-verbose "Vendor $Vendor" -verbose
+write-verbose "Vendor: $Vendor" -verbose
 $Architecture = $App.Architecture
-write-verbose "Architecture $Architecture" -verbose
+write-verbose "Architecture: $Architecture" -verbose
 $DisplayName = $App.DisplayName
-write-verbose "DisplayName $DisplayName" -verbose
+write-verbose "DisplayName: $DisplayName" -verbose
 $PackageName = "$Product"
-write-verbose "PackageName $PackageName " -verbose
+write-verbose "PackageName: $PackageName " -verbose
 $Evergreen = $App.Evergreen
-write-verbose "Evergreen $Evergreen" -verbose
+write-verbose "Evergreen: $Evergreen" -verbose
 $Version = $MyDefinitionFile.Data.ARPData.$("$Product" + "Ver")
-write-verbose "Version $Version" -verbose
+write-verbose "Version: $Version" -verbose
 $URL = $MyDefinitionFile.Data.ARPData.$("$Product" + "Download")
-write-verbose "URL $URL " -verbose
+write-verbose "URL: $URL " -verbose
 $InstallerType = $App.Installer
-write-verbose "InstallerType $InstallerType " -verbose
+write-verbose "InstallerType: $InstallerType " -verbose
 $UnattendedArgs = $App.Install
-write-verbose "UnattendedArgs $UnattendedArgs" -verbose
+write-verbose "UnattendedArgs: $UnattendedArgs" -verbose
 $UnattendedArgs = $UnattendedArgs.Replace("/i ","")
-write-verbose "UnattendedArgs $UnattendedArgs " -verbose
+write-verbose "UnattendedArgs without /i: $UnattendedArgs " -verbose
 $LogApp = "${env:SystemRoot}" + "\Temp\$Product $Version.log"
-write-verbose "LogApp $LogApp" -verbose
+write-verbose "LogApp: $LogApp" -verbose
 write-output "-----------------------------------------------------------------"
 }
