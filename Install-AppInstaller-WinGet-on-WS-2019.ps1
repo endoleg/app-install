@@ -4,6 +4,7 @@
 # https://www.slidingwindows.de/slw18/
 
 # You have to activate developer mode (Use developer features) in Windows!
+# "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" /t REG_DWORD /f /v "AllowDevelopmentWithoutDevLicense" /d "1"
 
 ##########################################
 ## Install AppInstaller/WinGet on WS 2019
